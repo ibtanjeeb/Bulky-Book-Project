@@ -1,0 +1,288 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\BulkyBook.csproj": {}
+  },
+  "projects": {
+    "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectName": "BulkyBook.DataAccess",
+        "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              },
+              "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectName": "BulkyBook.Models",
+        "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectName": "BulkyBook.Utility",
+        "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\BulkyBook.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\BulkyBook.csproj",
+        "projectName": "BulkyBook",
+        "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\BulkyBook.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+                "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
+              },
+              "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              },
+              "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
