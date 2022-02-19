@@ -440,3 +440,4 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Dapper.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
