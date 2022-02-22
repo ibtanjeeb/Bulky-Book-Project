@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BulkyBook.Controllers
+namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
@@ -21,6 +21,7 @@ namespace BulkyBook.Controllers
         }
         public IActionResult Index()
         {
+            
             return View();
         }
         public IActionResult Upsert(int? id)
@@ -39,7 +40,29 @@ namespace BulkyBook.Controllers
                 return NotFound();
             }
             return View(category);
-            return View();
+           
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(Category category)
+        {
+            if(ModelState.IsValid)
+            {
+                if(category.Id==0)
+                {
+                    _unitOfWork.Category.Add(category);
+                }
+                else
+                {
+                    _unitOfWork.Category.Update(category);
+                }
+
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(category);
         }
 
 
@@ -52,6 +75,19 @@ namespace BulkyBook.Controllers
             var allobj = _unitOfWork.Category.GetAll();
 
             return Json(new { data = allobj });
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _unitOfWork.Category.Get(id);
+            if(objFromDb==null)
+            {
+                return Json(new { success = false, message = "Error While Deleting" });
+            }
+            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Deleted Successfully" });
         }
 
 
