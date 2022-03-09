@@ -72,50 +72,67 @@ namespace BulkyBook.Areas.Admin.Controllers
             {
                 string webRootPath = _hostEnvironment.WebRootPath;
                 var files = HttpContext.Request.Form.Files;
-                if(files.Count>0)
+                if (files.Count > 0)
                 {
                     string fileName = Guid.NewGuid().ToString();
                     var uploads = Path.Combine(webRootPath, @"images\products");
-                    var extension = Path.GetExtension(files[0].FileName);
+                    var extenstion = Path.GetExtension(files[0].FileName);
 
-                    if(productVM.Product.ImageUrl!=null)
+                    if (productVM.Product.ImageUrl != null)
                     {
-                        //this is edit and We want to remove old Image
+                        //this is an edit and we need to remove old image
                         var imagePath = Path.Combine(webRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
-                        if(System.IO.File.Exists(imagePath))
+                        if (System.IO.File.Exists(imagePath))
                         {
                             System.IO.File.Delete(imagePath);
                         }
-                        productVM.Product.ImageUrl = @"images\products" + fileName + extension;
-
                     }
-                    using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    using (var filesStreams = new FileStream(Path.Combine(uploads, fileName + extenstion), FileMode.Create))
                     {
-                        files[0].CopyTo(fileStreams);
+                        files[0].CopyTo(filesStreams);
                     }
+                    productVM.Product.ImageUrl = @"\images\products\" + fileName + extenstion;
                 }
                 else
                 {
-                    if(productVM.Product.Id!=0)
+                    //update when they do not change the image
+                    if (productVM.Product.Id != 0)
                     {
                         Product objFromDb = _unitOfWork.product.Get(productVM.Product.Id);
                         productVM.Product.ImageUrl = objFromDb.ImageUrl;
                     }
                 }
 
+
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.product.Add(productVM.Product);
+
                 }
                 else
                 {
                     _unitOfWork.product.Update(productVM.Product);
                 }
-
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-
+            else
+            {
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                productVM.CoverTypeList = _unitOfWork.coverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                if (productVM.Product.Id != 0)
+                {
+                    productVM.Product = _unitOfWork.product.Get(productVM.Product.Id);
+                }
+            }
             return View(productVM);
         }
 
