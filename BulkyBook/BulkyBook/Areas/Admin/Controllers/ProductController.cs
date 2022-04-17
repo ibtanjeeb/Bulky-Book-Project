@@ -70,6 +70,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 string webRootPath = _hostEnvironment.WebRootPath;
                 var files = HttpContext.Request.Form.Files;
                 if (files.Count > 0)
@@ -81,6 +82,7 @@ namespace BulkyBook.Areas.Admin.Controllers
                     if (productVM.Product.ImageUrl != null)
                     {
                         //this is an edit and we need to remove old image
+                        
                         var imagePath = Path.Combine(webRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
                         if (System.IO.File.Exists(imagePath))
                         {
@@ -155,6 +157,12 @@ namespace BulkyBook.Areas.Admin.Controllers
             if(objFromDb==null)
             {
                 return Json(new { success = false, message = "Error While Deleting" });
+            }
+            string webRootPath = _hostEnvironment.WebRootPath;
+            var imagePath = Path.Combine(webRootPath, objFromDb.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
             }
             _unitOfWork.product.Remove(objFromDb);
             _unitOfWork.Save();
