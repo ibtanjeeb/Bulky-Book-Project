@@ -1,5 +1,6 @@
 ﻿using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,7 @@ namespace BulkyBook.DataAccess.Repository
             _db = db;
 
             Category = new CategoryRepository(_db);
+            Company = new CompanyRepository(_db);
             coverType = new CoverTypeRepository(_db);
             product = new ProductRepository(_db);
             SP_Call = new SP_Call(_db);
@@ -22,6 +24,7 @@ namespace BulkyBook.DataAccess.Repository
         }
 
         public ICategoryRepository Category { get; private set; }
+        public ICompanyRepository Company { get; private set; }
         public ICoverTypeRepository coverType { get; private set; }
 
         public IProductRepository product { get; private set; }

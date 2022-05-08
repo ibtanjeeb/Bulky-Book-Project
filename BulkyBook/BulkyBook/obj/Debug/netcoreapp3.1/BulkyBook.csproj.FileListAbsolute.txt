@@ -11,7 +11,6 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\BulkyBook.Views.pdb
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
@@ -26,9 +25,6 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -207,7 +203,6 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.DataAnnotations.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.EventBasedAsync.dll
@@ -287,7 +282,6 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
@@ -450,3 +444,11 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Upsert.cshtml.g.cs
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Binder.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Company\Upsert.cshtml.g.cs

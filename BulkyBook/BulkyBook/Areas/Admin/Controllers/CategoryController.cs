@@ -26,7 +26,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         }
         public IActionResult Upsert(int? id)
         {
-            Category category = new Category();
+            Category  category = new Category();
 
             if(id==null)
             {
