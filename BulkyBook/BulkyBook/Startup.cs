@@ -54,6 +54,12 @@ namespace BulkyBook
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 options.SlidingExpiration = true;
             });
+            services.AddAuthentication().AddFacebook(option =>
+            {
+                option.AppId = "1137683490108815";
+                option.AppSecret = "f00615d2ad16c09197ee81b0b7c2bcce";
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

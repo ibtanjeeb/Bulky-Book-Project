@@ -491,3 +491,5 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
