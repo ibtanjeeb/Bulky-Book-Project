@@ -7,63 +7,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+    public class UserController : Controller
     {
-   
-        private readonly IUnitOfWork _unitOfWork;
-        public CategoryController(IUnitOfWork unitOfWork)
+
+        private readonly ApplicationDbContext _db;
+        public UserController(ApplicationDbContext db)
         {
-            _unitOfWork = unitOfWork;
+            _db = db;
         }
         public IActionResult Index()
         {
             
             return View();
         }
-        public IActionResult Upsert(int? id)
-        {
-            Category  category = new Category();
-
-            if(id==null)
-            {
-                return View(category);
-            }
-
-            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
-            
-            if(category==null)
-            {
-                return NotFound();
-            }
-            return View(category);
-           
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Category category)
-        {
-            if(ModelState.IsValid)
-            {
-                if(category.Id==0)
-                {
-                    _unitOfWork.Category.Add(category);
-                }
-                else
-                {
-                    _unitOfWork.Category.Update(category);
-                }
-
-                _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View(category);
-        }
+        
+          
 
 
         #region API CAlls
@@ -72,22 +35,44 @@ namespace BulkyBook.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
 
-            var allobj = _unitOfWork.Category.GetAll();
+            var UserList = _db.ApplicationUsers.Include(u => u.Company).ToList();
+            var UserRole = _db.UserRoles.ToList();
+            var roles = _db.Roles.ToList();
+            foreach(var user in UserList)
+            {
+                var RoleId = UserRole.FirstOrDefault(u => u.UserId == user.Id).RoleId;
+                user.Role = roles.FirstOrDefault(u => u.Id == RoleId).Name;
+                if(user.Company==null)
+                {
+                    user.Company = new Company()
+                    {
+                        Name = ""
+                    };
 
-            return Json(new { data = allobj });
+                }
+            }
+
+            return Json(new { data = UserList });
         }
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
+        [HttpPost]
+        public IActionResult LockUnlock([FromBody] string id)
         {
-            var objFromDb = _unitOfWork.Category.Get(id);
-            if(objFromDb==null)
+            var objfromDb = _db.ApplicationUsers.FirstOrDefault(u => u.Id == id);
+            if(objfromDb==null)
             {
-                return Json(new { success = false, message = "Error While Deleting" });
+                return Json(new { success = false, message = "Error Occur While Lock/Unlock" });
             }
-            _unitOfWork.Category.Remove(objFromDb);
-            _unitOfWork.Save();
-            return Json(new { success = true, message = "Deleted Successfully" });
+            if(objfromDb.LockoutEnd!=null&&objfromDb.LockoutEnd>DateTime.Now)
+            {
+                objfromDb.LockoutEnd = DateTime.Now;
+            }
+            else
+            {
+                objfromDb.LockoutEnd = DateTime.Now.AddYears(1000);
+            }
+            _db.SaveChanges();
+            return Json(new { success = true, message = "Operation Successfully" });
         }
 
 
