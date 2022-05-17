@@ -8,10 +8,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
     public class UserController : Controller
     {
 
