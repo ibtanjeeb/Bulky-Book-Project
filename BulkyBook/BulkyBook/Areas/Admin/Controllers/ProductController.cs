@@ -120,7 +120,7 @@ namespace BulkyBook.Areas.Admin.Controllers
             }
             else
             {
-                productVM.CategoryList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
@@ -145,7 +145,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
 
-            var allobj = _unitOfWork.product.GetAll(includeProperties:"Company,CoverType");
+            var allobj = _unitOfWork.product.GetAll(includeProperties:"Category,CoverType");
 
             return Json(new { data = allobj });
         }
