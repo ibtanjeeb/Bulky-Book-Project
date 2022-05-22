@@ -1,0 +1,108 @@
+﻿using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
+using BulkyBook.Utility;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+
+namespace BulkyBook.Areas.Customer.Controllers
+{
+    [Area("Customer")]
+    public class CartController : Controller
+    {
+        public IUnitOfWork _unitOfWork;
+        public IEmailSender _emailSender;
+        public UserManager<IdentityUser> _userManager;
+        public ShoppingCartVM ShoppingCartVM { get; set; }
+        public CartController(IUnitOfWork unitOfWork,IEmailSender emailSender,UserManager<IdentityUser> userManager)
+        {
+            _unitOfWork = unitOfWork;
+            _emailSender = emailSender;
+            _userManager = userManager;
+        }
+        public IActionResult Index()
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claims = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+
+            ShoppingCartVM = new ShoppingCartVM()
+            {
+                OrderHeader = new Models.OrderHeader(),
+                CartList = _unitOfWork.shppingCart.GetAll(u =>u.ApplicationUserId == claims.Value,includeProperties:"Product")
+                
+                
+
+            };
+            ShoppingCartVM.OrderHeader.OrderTotal = 0;
+            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.applicationUser
+                .GetFirstOrDefault(u => u.Id == claims.Value, includeProperties: "Company");
+
+            foreach(var list in ShoppingCartVM.CartList)
+            {
+                list.Price = SD.GetPriceBasedOnQuantity(list.Count, list.Product.Price, list.Product.Price50, list.Product.Price100);
+                ShoppingCartVM.OrderHeader.OrderTotal += (list.Price * list.Count);
+                list.Product.Description = SD.ConvertToRawHtml(list.Product.Description);
+                if(list.Product.Description.Length>100)
+                {
+                    list.Product.Description = list.Product.Description.Substring(0, 99)+"...";
+                }
+
+            }
+
+            return View(ShoppingCartVM);
+
+        }
+
+        public IActionResult Plus(int CartId)
+        {
+            var cart = _unitOfWork.shppingCart.GetFirstOrDefault(u => u.Id == CartId,includeProperties:"Product");
+            cart.Count += 1;
+            cart.Price = SD.GetPriceBasedOnQuantity(cart.Count, cart.Product.Price, cart.Product.Price50, cart.Product.Price100);
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));
+               
+        }
+        public IActionResult Minus(int CartId)
+        {
+            var cart = _unitOfWork.shppingCart.GetFirstOrDefault(u => u.Id == CartId, includeProperties: "Product");
+            if (cart.Count == 1)
+            {
+                var cnt = _unitOfWork.shppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId.ToString()).Count();
+                _unitOfWork.shppingCart.Remove(cart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SsShoppinCart, cnt - 1);
+            }
+            else
+            {
+                cart.Count -= 1;
+                cart.Price = SD.GetPriceBasedOnQuantity(cart.Count, cart.Product.Price, cart.Product.Price50, cart.Product.Price100);
+                _unitOfWork.Save();
+            }
+            return RedirectToAction(nameof(Index));
+
+        }
+        public IActionResult Remove(int CartId)
+        {
+            var cart = _unitOfWork.shppingCart.GetFirstOrDefault(u => u.Id == CartId, includeProperties: "Product");
+            
+                var cnt = _unitOfWork.shppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId.ToString()).Count();
+                _unitOfWork.shppingCart.Remove(cart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SsShoppinCart, cnt - 1);
+            
+           
+                
+            
+            return RedirectToAction(nameof(Index));
+
+        }
+
+    }
+}

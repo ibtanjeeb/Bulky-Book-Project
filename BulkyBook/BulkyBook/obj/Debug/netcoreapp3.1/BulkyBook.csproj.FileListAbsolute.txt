@@ -494,3 +494,4 @@ G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\De
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\BulkyBook.pdb
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\BulkyBook.genruntimeconfig.cache
 G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
+G:\Bulky Book Project-ASP.Net Core\Bulky-Book-Project\BulkyBook\BulkyBook\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
