@@ -185,6 +185,10 @@ namespace BulkyBook.Areas.Customer.Controllers
 
             if(stripeToken==null)
             {
+                //Order Will Payment  Delayed For Authorization Company
+                ShoppingCartVM.OrderHeader.PaymentDueDate = DateTime.Now.AddDays(30);
+                ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusDelayedPayment;
+                ShoppingCartVM.OrderHeader.OrderStatus = SD.PaymentStatusApproved;
 
             }
             else
