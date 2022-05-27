@@ -298,7 +298,7 @@
                             }
 
                             @if (Model.orderHeader.PaymentStatus == SD.PaymentStatusDelayedPayment &&
-                            Model.orderHeader.OrderStatus == SD.StatusShipped)
+                              Model.orderHeader.OrderStatus == SD.StatusShipped)
                             {
                                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                         data-key="@Stripe.Value.Publishablekey"
@@ -318,15 +318,14 @@
 
 
                             @if (Model.orderHeader.OrderStatus != SD.StatusRefunded &&
-                        Model.orderHeader.OrderStatus != SD.StatusCancelled &&
-                        (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee)))
+                          Model.orderHeader.OrderStatus != SD.StatusCancelled &&
+                          (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee)))
                             {
                                 <div class="pt-2">
                                     <a asp-action="CancelOrder" asp-route-id="@Model.orderHeader.Id"
                                        class="btn btn-danger form-control">Cancel Order</a>
                                 </div>
                             }
-
                         </div>
                     </div>
                 </div>
@@ -334,6 +333,8 @@
         </div>
     </div>
 </form>
+
+
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
     <script>
