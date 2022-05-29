@@ -44,6 +44,7 @@ namespace BulkyBook
             services.AddRazorPages();
             services.AddSingleton<IEmailSender, EmailSender>();
             services.Configure<StripeSetting>(Configuration.GetSection("Stripe"));
+            services.Configure<TwilioSetting>(Configuration.GetSection("Twilio"));
             services.ConfigureApplicationCookie(options =>
             {
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied";

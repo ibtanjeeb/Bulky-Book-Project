@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k4kN4gYpyNwqkwF51br2eKqV5faxCNIkDYT5FC2jN9dSoVi1lxLLrbifCLAZM4Kgopxhago+Knh8cz0Vu/deiw==",
+  "dgSpecHash": "Z86857OkqoONZQVpL28lQRc+hs0eeDUBvA19RU5kng74c1xKJILxmDispYwdNHe+59KKN6cM8yYjQcT6klMM/w==",
   "success": true,
   "projectFilePath": "G:\\Bulky Book Project-ASP.Net Core\\Bulky-Book-Project\\BulkyBook\\BulkyBook\\BulkyBook.csproj",
   "expectedPackageFiles": [
@@ -213,7 +213,8 @@
     "C:\\Users\\USER\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\USER\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\twilio\\5.75.1\\twilio.5.75.1.nupkg.sha512"
   ],
   "logs": []
 }
