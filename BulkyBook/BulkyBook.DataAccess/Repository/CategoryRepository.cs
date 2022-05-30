@@ -1,5 +1,6 @@
 ﻿using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Repository.IRepository;
+using BulkyBook.DataAccess.Repository;
 using BulkyBook.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Text;
 
 namespace BulkyBook.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class CategoryRepository : RepositoryAsync<Category>, ICategoryRepository
     {
         private readonly ApplicationDbContext _db;
 
@@ -25,5 +26,7 @@ namespace BulkyBook.DataAccess.Repository
                 _db.SaveChanges();
             }
         }
+
+        
     }
 }
